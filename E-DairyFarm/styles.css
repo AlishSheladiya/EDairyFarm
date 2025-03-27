@@ -1,0 +1,125 @@
+
+ .container-xxl {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.site-footer .item a {
+display: block;
+color: #ddd;
+text-decoration: none;
+margin: 5px 0;
+transition: 0.3s;
+}   
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo h1 {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.navbar .logo .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+}
+.service{
+    border-radius:50%;
+    border-color: #495057;
+}
+.img-fluid {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); 
+    opacity: 0.8; 
+}
+.app-logo{
+    margin-top: 20px;
+    
+}
+.app-logo img{
+    width: 140px;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #2ec8e4;
+    transform: scale(1.05); 
+}
+
+.about-experience{
+    transition: all 0.3s ease-in-out;
+    background-color: #d2d7db;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.about-experience {
+    transition: all 0.1s ease-in-out;
+}
+.service {
+    border: 2px solid black;
+    padding: 5px; 
+}
+
+.about-experience:hover {
+    background-color: #ace0ac; 
+    color: rgb(12, 226, 190) ; 
+    transform: scale(1.05); }
+
+.about-experience h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.about-experience medium {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.navbar-color{
+    background-color:#2f3333;
+}
+.colored-container {
+    background-color:#abe4e4;
+}
+.menu h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ebe8e3ec;
+}
+
+
+#p1:hover{
+    transform: scale(1.1);
+    cursor:pointer
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .slide{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 550px;
+  }

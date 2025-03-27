@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Dairy Farm</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+    <div class="container colored-container"></div>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-color fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <div class="logo">
+                    <img src="logo1.png" alt="Edairy Farm" class="logo-img">
+                    <h1>Edairy farm</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="#home"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#product"><b>Products</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#About"><b>About Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Contact"><b>Contact</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html"><b>Login</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="colored-container">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+    
+        <!-- Carousel Slide -->
+        <div class="carousel-inner slide">
+            <div class="carousel-item active ">
+                <img src="a1.jpeg" class="d-block w-100" alt="Image 1">
+                <div class="carousel-caption">
+                    <h3>Organic Dairy Products</h3>
+                    <p>Experience the farm-fresh difference!</p>                   
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="a2.jpeg" class="d-block w-100" alt="Image 2">
+                <div class="carousel-caption">
+                    <h3>Organic Dairy Products</h3>
+                    <p>Experience the farm-fresh difference!</p>                   
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="a3.jpeg" class="d-block w-100" alt="Image 3">
+                <div class="carousel-caption">
+                    <h3>Organic Dairy Products</h3>
+                    <p>Experience the farm-fresh difference!</p>                   
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script>
+        function showProductDetails(title, description, price, image) {
+            document.getElementById("modalProductTitle").innerText = title;
+            document.getElementById("modalProductDescription").innerText = description;
+            document.getElementById("modalProductPrice").innerText = price;
+            document.getElementById("modalProductImage").src = image;
+            var myModal = new bootstrap.Modal(document.getElementById('productModal'));
+            myModal.show();
+        }
+    </script>
+    
+    <!-- Dairy Products -->
+    <div id="product" class="container my-5">
+        <h2 class="text-center mb-5 text-dark"><i>Our Dairy Products</i></h2>
+        <div class="menu row row-cols-2 row-cols-md-3 g-4">
+             <div class="col" id="p1">
+             <div class="card h-100" onclick="showProductDetails('Fresh Milk', 'Milk is a good source of vitamins A, B1, B12, D, and E Milk contains minerals like calcium, magnesium, potassium, and zinc ','INR 120 / Liter', 'milk.png')">
+                <img src="milk.png" class="card-img-top" alt="Fresh Milk">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh Milk</h5>
+                    <p class="card-text">Organic, farm-fresh milk. Perfect for all your dairy needs.</p>
+                    <p class="card-price">INR 120 / Liter</p>
+                </div>
+            </div>
+            </div>
+           <div class="col" id="p1">
+                <div class="card h-100" onclick="showProductDetails('Premium Cheese', 'Cheese is a good source of calcium, which helps maintain healthy bones and teeth. Cheese is high in sodium, which helps prevent bacteria growth and retain moisture. 25 grams of protein per 100gram of cheese', 'INR 200 / 200g', 'cheese.png')"> 
+                    <img src="cheese.png" class="card-img-top" alt="Premium Cheese">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Cheese</h5>
+                        <p class="card-text">Creamy, rich cheese made from the best milk.</p>
+                        <p class="card-price">INR 200 / 200g</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"  id="p1">
+                <div class="card h-100" onclick="showProductDetails('Butter', 'Butter is high in calories and fat, so its best to eat it in moderation as part of a well-balanced diet. Butter Lowers Heart Attack Risk Compared to Margarine.Butter Contains a Lot of Healthy Saturated Fats ', 'INR 250 / 250g', 'butter.jpeg')">
+                    <img src="butter.jpeg" class="card-img-top" alt="Butter">
+                    <div class="card-body">
+                        <h5 class="card-title">Butter</h5>
+                        <p class="card-text">Rich and creamy butter made from fresh milk.</p>
+                        <p class="card-price">INR 250 / 250g</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"  id="p1">
+                <div class="card h-100" onclick="showProductDetails('Milk Penda', 'Milk peda is a yummy dessert item which can easily be prepared at home. It is prepared using condensed milk which is rich in potassium, carbohydrates, protein, calcium, Vitamins', 'INR 400 / Kg', 'penda.png')">
+                    <img src="penda.png" class="card-img-top" alt="Milk Penda">
+                    <div class="card-body">
+                        <h5 class="card-title">Milk Penda</h5>
+                        <p class="card-text">Experience the creamy delight of milk peda.</p>
+                        <p class="card-price">INR 400 / Kg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="p1">
+                <div class="card h-100" onclick="showProductDetails('Maysore', 'Mysore pak is an Indian sweet prepared in ghee. It originated in the city of Mysore, It is made of generous amounts of ghee, sugar, gram flour, and often cardamom. The texture of this sweet is similar to a buttery and dense cookie.', 'INR 500 / Kg', 'maysoor.png')">
+                    <img src="maysoor.png" class="card-img-top" alt="Maysore">
+                    <div class="card-body">
+                        <h5 class="card-title">Mysore</h5>
+                        <p class="card-text">Made up of 100% pure Ghee and Cashew.</p>
+                        <p class="card-price">INR 500 / Kg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"  id="p1">
+                <div class="card h-100" onclick="showProductDetails('Kathiyawadi Thabdi','Thabdi penda is a traditional Indian sweet that made from milk, sugar, and khoya, and is often flavored with nuts and spices. It is a popular dessert during festivals and is often given asa  gift. ', 'INR 500 / Kg', 'thabdi.png')">
+                    <img src="thabdi.png" class="card-img-top" alt="thabdi">
+                    <div class="card-body">
+                        <h5 class="card-title">Kathiyawadi Thabdi</h5>
+                        <p class="card-text">"Thabdi! The sweetest ending to every meal"</p>
+                        <p class="card-price">INR 500 / Kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews-->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Customer Reviews</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card p-3">
+                    <h5>John Doe</h5>
+                    <p>"The milk is absolutely delicious! Best I've had in years!"</p>
+                    <p class="text-muted">⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3">
+                    <h5>Jane Smith</h5>
+                    <p>"I love the cheese. It’s perfect for sandwiches and snacks!"</p>
+                    <p class="text-muted">⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container" id="About">
+            <div class="row g-5 align-items-end">
+                <div class="col-lg-6">
+                    <div class="row g-2">
+                        <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
+                            <div class="about-experience exp bg-secondary rounded">
+                                <h1 class="display-1">25</h1>
+                                <small class="fs-5 fw-bold">Years Experience</small>
+                            </div>
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid rounded" src="c1.png" alt="Service 1">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                            <img class="img-fluid rounded" src="c2.png" alt="Service 2">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
+                            <img class="img-fluid rounded" src="c3.png" alt="Service 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="section-title text-center text-primary pe-2">About Us</p>
+                    <h1 class="mb-4">Know About Our Dairy Farm & Our History</h1>
+                    <p class="mb-4">
+                        Welcome to our dairy farm, where tradition meets quality. Established generations ago, our
+                        family-owned farm has been dedicated to producing fresh, high-quality milk and dairy products.
+                        With a commitment to sustainable practices and animal welfare, we ensure that every product
+                        reflects our passion for purity and excellence. Experience the farm-fresh difference!
+                    </p>
+                    <div class="row g-5 pt-2 mb-5">
+                        <div class="col-sm-6">
+                            <img class="img-fluid mb-4 rounded-circle service" src="service.png" alt="Service">
+                            <h5 class="mb-3">Dedicated Services</h5>
+                            <span>We offer dedicated services with personalized care, ensuring premium quality, timely
+                                delivery, and customer satisfaction for all your dairy needs.</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded-circle  service mb-4" src="product.png" alt="Product">
+                            <h5 class="mb-3">Organic Products</h5>
+                            <span>Our organic products are crafted with care, free from chemicals, and packed with
+                                natural goodness, offering you the healthiest, farm-fresh dairy experience.</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer-->
+    <div class="container-fluid bg-dark " data-wow-delay="0.1s">
+        <div class="container py-5" id="Contact">
+            <div class="row g-5">
+
+                <div class="col-lg-3 ">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="#About">About Us</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 ">
+                    <h5 class="text-light mb-4">Business Hours</h5>
+                    <p class="mb-1 text-white">Monday - Friday</p>
+                    <h6 class="text-light">06:00 am - 09:00 pm</h6>
+                    <p class="mb-1 text-white">Saturday</p>
+                    <h6 class="text-light">07:00 am - 10:00 pm</h6>
+                    <p class="mb-1 text-white">Sunday</p>
+                    <h6 class="text-light">07:00 am - 12:00 pm</h6>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="text-light">Download Our App</h3>
+                    <p class="text-light">Get it on Google Play & App Store</p>
+                    <div class="app-logo">
+                        <img class="img-fluid rounded" src="play-store.png" alt="Play Store">
+                        <img class="img-fluid rounded" src="app-store.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="text-light mb-4">Follow Us</h3>
+                    <p>
+                        <a href="https://facebook.com" target="_blank" class="text-white mx-3">Facebook</a>
+                        <a href="https://twitter.com" target="_blank" class="text-white mx-3">Twitter</a>
+                        <a href="https://instagram.com" target="_blank" class="text-white mx-3">Instagram</a>
+                    </p>
+                </div>
+                <p class="text-light text-center">© 2025 Edairy farm All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</div>
+<!-- Product Detail Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalProductImage" class="img-fluid mb-3" src="" alt="Product Image">
+                <h5 id="modalProductTitle"></h5>
+                <p id="modalProductDescription"></p>
+                <p><strong>Price: </strong><span id="modalProductPrice"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
